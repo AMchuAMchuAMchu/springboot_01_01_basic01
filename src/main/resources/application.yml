@@ -7,7 +7,7 @@ likesAnime:
   anime02: "来自深渊"
   anime03: "约定的梦幻岛"
 
-bestAnime:
+bestanime:
   name: "Lycoris Recoil"
   releaseTime: 2022
   character01: "锦木千束"
@@ -19,3 +19,5 @@ recentAnime:
   - "食锈末世录"
 
 animeAndCharacters: [{c1: "锦木千束"},{c2: "井之上泷奈"},{c3: "米卡"}]
+
+animePath: "d:\tLycoReco"

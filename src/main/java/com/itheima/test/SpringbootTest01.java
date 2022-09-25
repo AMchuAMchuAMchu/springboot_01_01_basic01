@@ -1,7 +1,10 @@
 package com.itheima.test;
 
+import com.itheima.bean.BestAnime;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +36,16 @@ public class SpringbootTest01 {
     private String likeC1;
 
 
+    @Value("${animePath}")
+    private String animePath;
+
+
+    @Autowired
+    private Environment env;
+
+    @Autowired
+    private BestAnime bestanime;
+
     @GetMapping
     public String getAnimeKNCW(){
         System.out.println("animeInfo .. ... ");
@@ -40,6 +53,10 @@ public class SpringbootTest01 {
         System.out.println("animeReleaseTime::"+animeReleaseTime);
         System.out.println("laAnime01::"+laAnime01);
         System.out.println("likeC1::"+likeC1);
+        System.out.println("animePath::"+animePath);
+        System.out.println("=========================================");
+        System.out.println("recentAnime::"+env.getProperty("recentAnime[0]"));
+        System.out.println("bestAnime"+bestanime.toString());
         return "<h1>阔你吃哇...哦哈呦~~^_^</h1>";
     }
 
